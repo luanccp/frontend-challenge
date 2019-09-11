@@ -8,9 +8,12 @@ import { FaSearch } from 'react-icons/fa';
 
 import ClickAway from './dropdown'
 
+import {theme} from './root'
+
 
 import Header from "./header"
 import "./layout.css"
+import { from } from "rxjs";
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -29,29 +32,25 @@ const Layout = ({ children }) => {
       <div
         style={{
           margin: `0 auto`,
-          maxWidth: 1440,
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0,
+          maxWidth: '100%',
+          padding: `1.0875rem 12.9rem`,
+          backgroundColor:theme.dark.backgroundColor,
+          color: theme.dark.textColor
         }}
       >
-        <div style={{
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent:'space-between'
-        }}
-      >
-        <Grid container spacing={1} alignItems="flex-end">
-          <Grid item>
-            <FaSearch />
+        <div className="searchSection" style={{backgroundColor:theme.dark.elementColor, color:theme.dark.textColor}}>
+          <Grid container spacing={1} alignItems="flex-end">
+            <Grid item>
+              <FaSearch />
+            </Grid>
+            <Grid item>
+              <TextField id="input-with-icon-grid" placeholder="Search for a country.." />
+            </Grid>
           </Grid>
-          <Grid item>
-            <TextField id="input-with-icon-grid" placeholder="Search for a country.." />
-          </Grid>
-        </Grid>
 
-        <ClickAway></ClickAway>
-      </div>
-      <main>{children}</main>
+          <ClickAway></ClickAway>
+        </div>
+        <main>{children}</main>
       </div>
     </>
   )
