@@ -11,7 +11,14 @@ import { styles } from './styles'
 const SimpleCardComponent = ({ classes, imgCard, cardTitle, cardContent }) => (
   <div className={classes.card}>
     <img className={classes.image} src={imgCard} alt={cardTitle} />
-    <p className={classes.content}>{cardContent}</p>
+    <div className={classes.content}>
+      <p className={classes.title}>{cardTitle}</p>
+      <br/>
+      {/* cardContent.population, usar assim */}
+      <p><strong>Population:</strong>89731203</p> 
+      <p><strong>Region:</strong>blabla</p>
+      <p><strong>Capital:</strong>jusé</p>
+    </div>
   </div>
 )
 
