@@ -15,9 +15,9 @@ const SimpleCardComponent = ({ classes, imgCard, cardTitle, cardContent }) => (
       <p className={classes.title}>{cardTitle}</p>
       <br/>
       {/* cardContent.population, usar assim */}
-      <p><strong>Population:</strong>89731203</p> 
-      <p><strong>Region:</strong>blabla</p>
-      <p><strong>Capital:</strong>jusé</p>
+      <p><strong>Population:</strong>{cardContent.population}</p> 
+      <p><strong>Region:</strong>{cardContent.region}</p>
+      <p><strong>Capital:</strong>{cardContent.capital}</p>
     </div>
   </div>
 )

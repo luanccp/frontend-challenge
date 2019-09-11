@@ -28,15 +28,10 @@ const IndexPage = () => {
           <SimpleCard
             imgCard={Image}
             cardTitle={country.name}
-            cardContent={country.pop}>
+            cardContent={country}>
           </SimpleCard>
         ))}
       </div>
-      <SimpleCard
-        imgCard={Image}
-        cardTitle={'TITULO'}
-        cardContent={"LOREMIMPUSSSSUN"}>
-      </SimpleCard>
     </Layout>
   )
 }
