@@ -7,7 +7,6 @@ const Header = ({ siteTitle }) => (
   <header
     style={{
       background: theme.dark.backgroundColor,
-      marginBottom: `1.45rem`,
     }}
   >
     <div
@@ -18,7 +17,6 @@ const Header = ({ siteTitle }) => (
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
-        backgroundColor:'red'
       }}
     >
       <h1 style={{ margin: 0 }}>

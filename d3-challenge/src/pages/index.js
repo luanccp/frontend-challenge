@@ -23,7 +23,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <div style={{display: 'flex', flexDirection:'row'}}>
+      <div style={{display: 'flex', flexDirection:'row', flexWrap:'wrap', flexGrow: 1, justifyContent: 'space-between'}}>
         {countries.map(country => (
           <SimpleCard
             imgCard={Image}

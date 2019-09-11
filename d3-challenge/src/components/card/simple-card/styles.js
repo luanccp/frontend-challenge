@@ -6,7 +6,7 @@ import {theme} from '../../root'
 
 export const styles = createStyles({
   card: {
-    width: 300,
+    minWidth: 300,
     display: 'flex',
     flexDirection: 'column',
     borderRadius: '4px',
