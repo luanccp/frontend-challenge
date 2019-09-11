@@ -37,18 +37,6 @@ const Layout = ({ children }) => {
           color: theme.dark.textColor
         }}
       >
-        <div className="searchSection" style={{backgroundColor:theme.dark.elementColor, color:theme.dark.textColor}}>
-          <Grid container spacing={1} alignItems="flex-end">
-            <Grid item>
-              <FaSearch />
-            </Grid>
-            <Grid item>
-              <TextField id="input-with-icon-grid" placeholder="Search for a country.." />
-            </Grid>
-          </Grid>
-
-          <ClickAway></ClickAway>
-        </div>
         <main>{children}</main>
       </div>
     </>

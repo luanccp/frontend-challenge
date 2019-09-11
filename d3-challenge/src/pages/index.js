@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react"
 
+import { Link } from 'gatsby'
+
 import Layout from "../components/layout"
 import { SimpleCard } from "../components/card"
 import * as Image from '@content/images/gatsby-icon.png'
 
 import { theme } from '../components/root'
+import ActionBar from '../components/action-bar'
 
 const IndexPage = () => {
 
@@ -23,13 +26,18 @@ const IndexPage = () => {
 
   return (
     <Layout>
+      <ActionBar/>
       <div style={{display: 'flex', flexDirection:'row', flexWrap:'wrap', flexGrow: 1, justifyContent: 'space-between'}}>
         {countries.map(country => (
-          <SimpleCard
-            imgCard={Image}
-            cardTitle={country.name}
-            cardContent={country}>
-          </SimpleCard>
+          <Link
+            to="/country"
+          >
+            <SimpleCard
+              imgCard={country.flag}
+              cardTitle={country.name}
+              cardContent={country}>
+            </SimpleCard>
+          </Link>
         ))}
       </div>
     </Layout>
