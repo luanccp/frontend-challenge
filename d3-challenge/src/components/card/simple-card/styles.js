@@ -7,6 +7,7 @@ import {theme} from '../../root'
 export const styles = createStyles({
   card: {
     minWidth: 300,
+    maxWidth: 400,
     display: 'flex',
     flexDirection: 'column',
     borderRadius: '4px',
@@ -17,8 +18,8 @@ export const styles = createStyles({
   },
 
   title: {
-    marginTop: 36,
-    fontSize: 22,
+    marginTop: 12,
+    fontSize: 18,
     fontWeight: 600
   },
 
@@ -28,9 +29,9 @@ export const styles = createStyles({
   },
 
   image: {
-    objectFit: 'contain',
-    width: 110,
-    height: 80,
+    objectFit: 'cover',
+    width: 300,
+    height:180
   },
 })
 
