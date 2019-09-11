@@ -12,7 +12,9 @@ export const styles = createStyles({
     borderRadius: '4px',
     padding: '6px 4px 6px',
     backgroundColor: theme.dark.elementColor,
-    color: theme.dark.textColor
+    color: theme.dark.textColor,
+    marginRight: '52px',
+    marginBottom: '52px'
   },
 
   title: {
