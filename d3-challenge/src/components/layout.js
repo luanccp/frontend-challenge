@@ -13,7 +13,6 @@ import {theme} from './root'
 
 import Header from "./header"
 import "./layout.css"
-import { from } from "rxjs";
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
