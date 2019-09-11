@@ -31,6 +31,7 @@ const IndexPage = () => {
         {countries.map(country => (
           <Link
             to="/country"
+            state={{dataCountry: country}}
           >
             <SimpleCard
               imgCard={country.flag}
