@@ -6,7 +6,7 @@ import {theme} from './root'
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: theme.dark.backgroundColor,
+      background: theme.dark.elementColor,
     }}
   >
     <div
