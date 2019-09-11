@@ -2,18 +2,21 @@ import {
   createStyles
 } from '@material-ui/core'
 
-export const styles = theme => createStyles({
+import {theme} from '../../root'
+
+export const styles = createStyles({
   card: {
+    width: 300,
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    textAlign: 'center',
-    border: '1px solid #D9D8DD',
+    textAlign: 'left',
     boxSizing: 'border-box',
     borderRadius: '4px',
     padding: '36px 24px 32px',
-    backgroundColor:'red'
+    backgroundColor: theme.dark.elementColor,
+    color: theme.dark.textColor
   },
 
   title: {
@@ -22,6 +25,7 @@ export const styles = theme => createStyles({
 
   content: {
     margin: '16px 0 0',
+    textAlign:'left'
   },
 
   image: {
