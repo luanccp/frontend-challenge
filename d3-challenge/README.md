@@ -1,4 +1,4 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
+<!-- AUTO-GENERATED-CONTENT:START (STARTER)
 <p align="center">
   <a href="https://www.gatsbyjs.org">
     <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
@@ -6,47 +6,82 @@
 </p>
 <h1 align="center">
   Gatsby's default starter
-</h1>
+</h1> -->
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+My name is Luan Castheloge and this repo is for D3-Challenge.
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+
 
 ## 🚀 Quick start
 
-1.  **Create a Gatsby site.**
+  **Running the project**
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
 
-    ```sh
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
-    ```
+  Get in the project folder
+  ```sh
+  cd d3-challenge/
+  ```
+  Install all dependencies
+  ```sh
+  yarn install
+  ```
+  Run the project
+  ```sh
+  yarn start
+  ```
+   
+  **Why am I use React?**
+  Because is an open source JavaScript library which is used for building user interfaces for single page applications.
+    
+  The big PRO to use a SPA is that our web application works (mostly) without reloading the web pages.
+    
+  React is very simple and easy to learn, basic javascript.
 
-1.  **Start developing.**
+  It supports code reusability and give me more organization. It uses one side data binding and also flux which is an application architecture which controls the flow of the data from one point.
 
-    Navigate into your new site’s directory and start it up.
+  I can use VirtualDOM that allows me create components of memory data structures, which computes the changes and then updates the browser. So a unique feature is enabled which allows the user to code and it renders the components, elements, and data which can ultimately be processed and used.
+  
+  **Why am I use Styled-components?**
 
-    ```sh
-    cd my-default-starter/
-    gatsby develop
-    ```
+  First of all, because sometime the main CSS file is "a casa da mãe joana".
 
-1.  **Open the source code and start editing!**
+  With styled-components we can to write actual CSS code to style your components. It also removes the mapping between components and styles.
+  
+  Another thing is that styled-components generates unique class names for your styles. WE never have to worry about duplication.
 
-    Your site is now running at `http://localhost:8000`!
+  When I see that I'll work with Themes I thought and remembered of *createGlobalStyle*. So I adapting the styling of a component based on a **global theme** and puted dynamically.
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+  **Why am I use Gatsby?**
+  
+  When I read I realized that we don't have backend. I thought I'll use Gatsby, because is easier to start.
 
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+  But ok, why? First, velocity. I code and let Gatsby.js compile the most performant Webpack configuration to build my site. Additionally, it prefetches resources.
 
-## 🧐 What's inside?
+  Gatsby is based on React.js 
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+  I'm not an expert in GraphQL. Using Gatsby I start have contact with GraphQL.
+  I only know that is a query language with which you can fetch data from nearly any source.
+
+  Easy to take in production with Netlify.
+
+    
+  **Why am I use Netlify?**
+
+  Because it's very simple to integrate with Gatsby and Github. And I already did once before.
+
+  
+
+####  Scarfolding🧐
+
+A quick look at the top-level files and directories in my project.
 
     .
     ├── node_modules
     ├── src
+    ├────── api
+    ├────── components
+    ├────── content
+    ├────── pages
     ├── .gitignore
     ├── .prettierrc
     ├── gatsby-browser.js
@@ -58,40 +93,10 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
     ├── package.json
     └── README.md
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
 
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
 
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
-
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
-
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
-
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
-
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
-
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
-
-9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
-
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
-
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
-
-12. **`README.md`**: A text file containing useful reference information about your project.
-
-## 🎓 Learning Gatsby
-
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
-
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## 💫 Deploy
+## 💫 Deployed to:
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
 
-<!-- AUTO-GENERATED-CONTENT:END -->
+
