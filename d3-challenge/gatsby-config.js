@@ -53,5 +53,13 @@ module.exports = {
         ],
       }
     },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Nunito+Sans:300,600,800']
+        }
+      }
+    },
   ],
 }
