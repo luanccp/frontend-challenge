@@ -1,46 +1,44 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
-import {theme} from './root'
+import t from "prop-types"
+import { Link } from "gatsby"
+import styled from 'styled-components'
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: theme.dark.elementColor,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 1440,
-        padding: `1.45rem 1.0875rem`,
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-      <button>DarkMode</button>
-    </div>
-  </header>
+const StyledHeader = styled.header`
+  display: flex;
+  justify-content: space-between;
+
+  background-color: ${({ theme }) => theme && theme.elementColor};
+
+  margin: 0 auto;
+  max-width: 1440px;
+  padding: 1.45rem 1.0875rem;
+`
+
+const Title = styled.h1`
+  margin: 0;
+`
+
+const StyleLink = styled(Link)`
+  color: ${({ theme }) => theme && theme.textColor};
+  text-decoration: none;
+`
+
+const Header = ({ siteTitle, onChangeTheme }) => (
+  <StyledHeader>
+    <Title>
+      <StyleLink to="/">{siteTitle}</StyleLink>
+    </Title>
+    <button onClick={() => onChangeTheme()}>DarkMode</button>
+  </StyledHeader>
 )
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
+  siteTitle: t.string,
 }
 
 Header.defaultProps = {
-  siteTitle: ``,
+  siteTitle: '',
+  onChangeTheme: () => {}
 }
 
 export default Header

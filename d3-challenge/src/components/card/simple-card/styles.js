@@ -2,7 +2,7 @@ import {
   createStyles
 } from '@material-ui/core'
 
-import {theme} from '../../root'
+// import {theme} from '../../root'
 
 export const styles = createStyles({
   card: {
@@ -12,8 +12,8 @@ export const styles = createStyles({
     flexDirection: 'column',
     borderRadius: '4px',
     padding: '6px 4px 6px',
-    backgroundColor: theme.dark.elementColor,
-    color: theme.dark.textColor,
+    // backgroundColor: theme.dark.elementColor,
+    // color: theme.dark.textColor,
     marginBottom: '52px'
   },
 

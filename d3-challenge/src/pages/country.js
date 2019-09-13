@@ -4,8 +4,12 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
-import { FaSearch } from 'react-icons/fa';
+import { FaArrowLeft } from 'react-icons/fa';
 import { theme } from '../components/root'
+
+
+import {Button} from '../components/button'
+
 
 const SecondPage = ({ location }) => {
 
@@ -13,10 +17,14 @@ const SecondPage = ({ location }) => {
 
   return (
     <Layout>
-      <div className="searchSection" style={{backgroundColor:theme.dark.elementColor, color:theme.dark.textColor}}>
+      <div className="searchSection" /*style={{backgroundColor:theme.dark.elementColor, color:theme.dark.textColor}}*/>
         <Grid container spacing={1} alignItems="flex-end">
-          {/* COLOCAR O BOTAO COM SETA DO MATERIAL, usando link */}
-          <Link to='/'><button> Back </button></Link>
+          <Link to='/'>
+            <Button /*background={theme.dark.elementColor }*/ fontColor={theme.dark.textColor}>
+              <FaArrowLeft style={{marginRight:10}}/>
+              Back
+            </Button>
+          </Link>
         </Grid>
       </div>
       <div style={{display:'flex', flexDirection: 'row', justifyContent: 'flex-start',}}>

@@ -1,26 +1,12 @@
 import React from "react"
+import t from "prop-types"
 
-import TextField from '@material-ui/core/TextField';
-import Grid from '@material-ui/core/Grid';
-import { FaSearch } from 'react-icons/fa';
+import { SearchSection } from './styles'
 
-import ClickAway from '../dropdown'
+const ActionBar = ({ children }) => <SearchSection>{children}</SearchSection>
 
-import {theme} from '../root'
+ActionBar.propTypes = {
+  children: t.node.isRequired
+}
 
-export default function ActionBar() {
-    return (
-        <div className="searchSection" style={{backgroundColor:theme.dark.elementColor, color:theme.dark.textColor}}>
-        <Grid container spacing={1} alignItems="flex-end">
-          <Grid item>
-            <FaSearch />
-          </Grid>
-          <Grid item>
-            <TextField id="input-with-icon-grid" placeholder="Search for a country.." />
-          </Grid>
-        </Grid>
-        <ClickAway></ClickAway>
-      </div>
-    );
-  }
-  
+export default ActionBar
