@@ -37,7 +37,7 @@ const Layout = ({ children }) => {
     <ThemeProvider theme={themes[currentTheme]}>
       <>
         <GlobalStyle />
-        <Header siteTitle={'Where in the world?'} onChangeTheme={handleCurrentTheme} />
+        <Header siteTitle={'Where in the world?'} onChangeTheme={handleCurrentTheme} currentTheme={currentTheme} />
         <Content>{children}</Content>
       </>
     </ThemeProvider>

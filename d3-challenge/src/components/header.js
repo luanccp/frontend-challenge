@@ -3,6 +3,10 @@ import t from "prop-types"
 import { Link } from "gatsby"
 import styled from 'styled-components'
 
+import {Button} from '../components/button'
+
+import {FaMoon} from 'react-icons/fa'
+
 const StyledHeader = styled.header`
   display: flex;
   justify-content: space-between;
@@ -23,12 +27,15 @@ const StyleLink = styled(Link)`
   text-decoration: none;
 `
 
-const Header = ({ siteTitle, onChangeTheme }) => (
+const Header = ({ siteTitle, onChangeTheme, currentTheme }) => (
   <StyledHeader>
     <Title>
       <StyleLink to="/">{siteTitle}</StyleLink>
     </Title>
-    <button onClick={() => onChangeTheme()}>DarkMode</button>
+    <Button onClick={() => onChangeTheme()}>
+      DarkMode <FaMoon size={12} style={{marginLeft:6, marginRight:7}}/>
+      {currentTheme == 'lightTheme' ? "on": "off"}
+    </Button>
   </StyledHeader>
 )
 
