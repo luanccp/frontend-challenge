@@ -3,13 +3,11 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { ThemeProvider } from 'styled-components'
 
-import TextField from '@material-ui/core/TextField'
-import Grid from '@material-ui/core/Grid'
-import { FaSearch } from 'react-icons/fa'
+
 
 import GlobalStyle from './root/globalStyle'
 
-import ClickAway from './dropdown'
+
 import Header from "./header"
 import Content from './content'
 
@@ -27,6 +25,9 @@ const Layout = ({ children }) => {
     }
   `)
 
+  /**
+   * @brief change the theme between Dark and Light
+   */
   function handleCurrentTheme() {
     const theme = currentTheme === 'darkTheme' ? 'lightTheme' : 'darkTheme'
     setCurrentTheme(theme)
