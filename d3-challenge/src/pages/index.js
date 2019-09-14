@@ -3,7 +3,7 @@ import React, { useCallback, useState, useEffect } from "react"
 import { Link } from 'gatsby'
 
 import Layout from "../components/layout"
-import { SimpleCard } from "../components/card"
+import SimpleCard from "../components/card/simple-card"
 import * as Image from '@content/images/gatsby-icon.png'
 
 import { theme } from '../components/root'
@@ -86,8 +86,8 @@ const IndexPage = () => {
             <SimpleCard
               imgCard={country.flag}
               cardTitle={country.name}
-              cardContent={country}>
-            </SimpleCard>
+              cardContent={country}
+            />
           </Link>
         ))}
       </div>
