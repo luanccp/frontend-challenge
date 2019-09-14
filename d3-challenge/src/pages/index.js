@@ -34,7 +34,7 @@ const IndexPage = () => {
     }
 
     fetch()
-  }, []) // executa somente uma vez
+  }, []) // run just once
 
   useEffect(() => {
     document.title = `We have ${countries.length} countries!`

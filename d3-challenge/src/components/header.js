@@ -36,6 +36,7 @@ Header.propTypes = {
   siteTitle: t.string,
 }
 
+//Setting a function as a props
 Header.defaultProps = {
   siteTitle: '',
   onChangeTheme: () => {}
