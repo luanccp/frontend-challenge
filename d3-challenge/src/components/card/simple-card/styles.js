@@ -3,13 +3,14 @@ import styled from 'styled-components'
 export const Card = styled.div`
   min-width: 300px;
   max-width: 300px;
+  height: 380px;
   display: flex;
   flex-direction: column;
   border-radius: 4px;
   padding: 6px 4px 6px;
   background-color: ${({ theme }) => theme && theme.elementColor};
   color: ${({ theme }) => theme && theme.textColor};
-  margin-bottom: 52px;
+  margin: 52px 28px;
   box-shadow: 1px 8px 6px -6px black;
 
   :hover{

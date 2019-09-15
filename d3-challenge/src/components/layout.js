@@ -8,7 +8,7 @@ import { ThemeProvider } from 'styled-components'
 import GlobalStyle from './root/globalStyle'
 
 
-import Header from "./header"
+import Header from "../components/header/header"
 import Content from './content'
 
 import * as themes from './root'

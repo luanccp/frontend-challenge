@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
 export const StyleInput = styled.input`
   width: 30%;
   height: 50px;
-  background-color: ${({theme}) => theme && theme.inputColor};
+  background-color: ${({theme}) => theme && theme.elementColor};
   text-decoration: none;
   color: ${({theme})=> theme && theme.textColor};
   -webkit-transition: width 0.4s ease-in-out;

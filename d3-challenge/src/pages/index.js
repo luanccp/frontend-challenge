@@ -88,7 +88,7 @@ const IndexPage = () => {
           <NavbarDropdownItem value="Oceania">Oceania</NavbarDropdownItem>
         </NavbarDropdown> 
       </ActionBar>
-      <div style={{display: 'flex', flexDirection:'row', flexWrap:'wrap', flexGrow: 1, justifyContent: 'space-between'}}>
+      <div style={{display: 'flex', flexDirection:'row', flexWrap:'wrap', alignItems:'center'}}>
         {filterCountries.map(country => (
           <Link
             key={country.name}
