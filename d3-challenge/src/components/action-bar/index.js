@@ -1,9 +1,13 @@
 import React from "react"
 import t from "prop-types"
 
-import { SearchSection } from './styles'
+import { ActionBarSection } from './styles'
 
-const ActionBar = ({ children }) => <SearchSection>{children}</SearchSection>
+const ActionBar = ({ children }) => (
+  <ActionBarSection>
+    {children}
+  </ActionBarSection>
+)
 
 ActionBar.propTypes = {
   children: t.node.isRequired
