@@ -8,9 +8,6 @@ import { Card, CardImage, CardContent, CardTitle, CardDetail, CardStrongDetail, 
 
 const DetailCard = ({ imgCard, cardTitle, cardContent }) => {
 
-  const borderCountries = cardContent.borders
-  console.log("Borders -->", borderCountries)
-
   return (
     <Card>
       <CardImage src={imgCard} alt={cardTitle} />
@@ -35,13 +32,16 @@ const DetailCard = ({ imgCard, cardTitle, cardContent }) => {
           <CardStrongDetail>Top Level Domain : </CardStrongDetail>{cardContent.topLevelDomain}
         </CardDetail>
         <CardDetail>
-          <CardStrongDetail>Currencies : </CardStrongDetail>{cardContent.currencies.map((curr) => curr ? curr.name + ".": "" )}
+          <CardStrongDetail>Currencies : </CardStrongDetail>
+          {((cardContent || {}).currencies || []).map((curr) => curr ? curr.name + ".": "" )}
         </CardDetail>
         <CardDetail>
-          <CardStrongDetail>Languages : </CardStrongDetail>{cardContent.languages.map((lan) => lan.name  + ".")}
+          <CardStrongDetail>Languages : </CardStrongDetail>
+          {((cardContent || {}).languages || []).map((lan) => lan.name  + ".")}
         </CardDetail>
         <CardDetail>
-          <CardStrongDetail>{cardContent.borders.length !== 0 ? "Borders Coutries : ":""} </CardStrongDetail>{cardContent.borders.map((bCoutry) => <BorderCountry>{bCoutry}</BorderCountry>)}
+          <CardStrongDetail>{((cardContent || {}).borders || []).length !== 0 ? "Borders Coutries : ":""} </CardStrongDetail>
+          {((cardContent || {}).borders || []).map((bCoutry) => <BorderCountry>{bCoutry}</BorderCountry>)}
         </CardDetail>
       </CardContent>
     </Card>
