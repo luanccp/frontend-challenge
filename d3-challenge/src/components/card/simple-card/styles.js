@@ -33,9 +33,9 @@ export const CardContent = styled.div`
 
 export const CardTitle = styled.p`
   margin-top: 12px;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 900;
-  margin-bottom: 4px;
+  margin-bottom: 14px;
   background-color: ${({ theme }) => theme && theme.elementColor};
   color: ${({ theme }) => theme && theme.textColor};
 `
