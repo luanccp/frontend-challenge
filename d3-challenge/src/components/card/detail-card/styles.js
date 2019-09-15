@@ -18,7 +18,7 @@ export const CardImage = styled.img`
 `
 
 export const CardContent = styled.div`
-  font-size: 14px;
+  font-size: 16px;
   color: ${({ theme }) => theme && theme.textColor};
 
 `

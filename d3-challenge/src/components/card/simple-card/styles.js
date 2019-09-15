@@ -25,7 +25,7 @@ export const CardImage = styled.img`
 
 export const CardContent = styled.div`
   margin: 6px 24px 14px;
-  font-size: 12px;
+  font-size: 14px;
   background-color: ${({ theme }) => theme && theme.elementColor};
   color: ${({ theme }) => theme && theme.textColor};
 `
