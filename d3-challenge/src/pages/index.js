@@ -18,6 +18,8 @@ import ClickAway from '../components/dropdown'
 
 import Input from '../components/input'
 
+import { SearchSection, ActionBarSection, NavbarDropdown, NavbarDropdownContent, NavbarDropdownTitle, NavbarDropdownItem } from '../components/action-bar/styles'
+
 const IndexPage = () => {
 
   const [countries, setCountries] = useState([])
@@ -41,7 +43,7 @@ const IndexPage = () => {
     setFilterCountries(countries)
   }, [countries])
 
-  //TODO: Criar funcao de debounce
+  
   const handleFilterCountriesFilter = event => {
     const value = event.target.value
 
@@ -55,26 +57,41 @@ const IndexPage = () => {
     })
 
     setFilterCountries(newCountries)
+    document.title = `We have ${filterCountries.length} countries!`
+  }
+
+  const handleFilterByRegion = (event) => {
+    const region = event.target.value
     
-    console.log('filterCountries -->', filterCountries)
+    if (region!="") {
+      const countriesByRegion = countries.filter(country => {
+        if (country.region == region) return country
+      })
+      
+      document.title = `We have ${countriesByRegion.length} countries!`
+
+      return setFilterCountries(countriesByRegion)
+    }else{ return setFilterCountries(countries)}
   }
 
   return (
     <Layout>
       <ActionBar>
-        <Grid container spacing={1} alignItems="flex-end">
-          <Grid item>
-            <FaSearch />
-          </Grid>
-          <Grid item>
-            <Input
-              placeholder="Search for a country.."
-              onChange={handleFilterCountriesFilter}
-            />
-
-          </Grid>
-        </Grid>
-        <ClickAway></ClickAway>
+        <SearchSection>
+          <FaSearch />
+          <Input
+            placeholder="Search for a country.."
+            onChange={handleFilterCountriesFilter}
+          />
+        </SearchSection>
+        <NavbarDropdown onChange={handleFilterByRegion}>
+          <NavbarDropdownItem value="">Filter by region</NavbarDropdownItem>
+          <NavbarDropdownItem value="Africa">Africa</NavbarDropdownItem>
+          <NavbarDropdownItem value="Americas">Americas</NavbarDropdownItem>
+          <NavbarDropdownItem value="Asia">Asia</NavbarDropdownItem>
+          <NavbarDropdownItem value="Europe">Europe</NavbarDropdownItem>
+          <NavbarDropdownItem value="Oceania">Oceania</NavbarDropdownItem>
+        </NavbarDropdown> 
       </ActionBar>
       <div style={{display: 'flex', flexDirection:'row', flexWrap:'wrap', flexGrow: 1, justifyContent: 'space-between'}}>
         {filterCountries.map(country => (
