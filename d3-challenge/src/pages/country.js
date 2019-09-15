@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useEffect} from "react"
 import { Link } from "gatsby"
 
 import Layout from "../components/layout"
@@ -8,24 +8,29 @@ import { theme } from '../components/root'
 
 
 import {Button} from '../components/button'
+import ActionBar from "../components/action-bar";
 
 
 const CountryPage = ({ location }) => {
+  useEffect(() => {
+    try{
+      document.title = `${location.state.country.name} profile`
+    }catch (err) {
+      console.log("error ", err)
+    }    
+  }, []) // run just once
 
-  document.title = `${location.state.country.name} profile`
 
   return (
     <Layout>
-      <div className="searchSection" >
-        <Grid container spacing={1} alignItems="flex-end">
-          <Link to='/'>
-            <Button>
-              <FaArrowLeft style={{marginRight:10}}/>
-              Back
-            </Button>
-          </Link>
-        </Grid>
-      </div>
+      <ActionBar>
+        <Link to='/'>
+          <Button>
+            <FaArrowLeft style={{marginRight:10}}/>
+            Back
+          </Button>
+        </Link>
+      </ActionBar>
       <div style={{display:'flex', flexDirection: 'row', justifyContent: 'flex-start',}}>
         <img src={location.state.country.flag} style={{width:360, height:280}}></img>  
         <div style={{display:'flex', flexDirection: 'column', marginLeft: 28}}>
