@@ -23,7 +23,7 @@ const CountryPage = ({ location }) => {
     }    
   }, []) // run just once
 
-  const country = ((location || {}).state || {}).country
+  // const country = ((location || {}).state || {}).country
   return (
     <Layout>
       <ActionBar>
@@ -35,9 +35,9 @@ const CountryPage = ({ location }) => {
         </Link>
       </ActionBar>
       <DetailCard
-         imgCard={country.flag}
-         cardTitle={country.name}
-         cardContent={country}>
+         imgCard={((location || {}).state || {}).country.flag}
+         cardTitle={((location || {}).state || {}).country.name}
+         cardContent={((location || {}).state || {}).country}>
       </DetailCard>
   </Layout>
   )
