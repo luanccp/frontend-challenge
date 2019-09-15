@@ -34,7 +34,7 @@ const Header = ({ siteTitle, onChangeTheme, currentTheme }) => (
     </Title>
     <Button onClick={() => onChangeTheme()}>
       DarkMode <FaMoon size={12} style={{marginLeft:6, marginRight:7}}/>
-      {currentTheme == 'lightTheme' ? "on": "off"}
+      {currentTheme === 'lightTheme' ? "on": "off"}
     </Button>
   </StyledHeader>
 )
