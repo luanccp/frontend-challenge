@@ -10,11 +10,9 @@ import {FaMoon} from 'react-icons/fa'
 const StyledHeader = styled.header`
   display: flex;
   justify-content: space-between;
-
+  flex-wrap:wrap;
   background-color: ${({ theme }) => theme && theme.elementColor};
-
-  margin: 0 auto;
-  max-width: 1440px;
+  max-width: inherit;
   padding: 1.45rem 1.0875rem;
 `
 

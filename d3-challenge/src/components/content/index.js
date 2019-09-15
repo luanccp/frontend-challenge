@@ -6,4 +6,7 @@ export default styled.main`
   padding: 1.0875rem 12.9rem;
   background-color: ${({ theme }) => theme && theme.backgroundColor};
   color: ${({ theme }) => theme && theme.textColor};
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 `
