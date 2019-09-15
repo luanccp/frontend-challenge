@@ -5,9 +5,9 @@ const resolvePath = (directory) => path.resolve(__dirname, 'src', directory)
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `D3 - Challenge`,
+    description: `A project to get a position as Front-end developer`,
+    author: `@luanccp`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -37,7 +37,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/content/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/content/images/icon.svg`, // This path is relative to the root of the site.
       },
     },
     {
