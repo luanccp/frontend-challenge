@@ -20,7 +20,6 @@ export const CardImage = styled.img`
 export const CardContent = styled.div`
   font-size: 16px;
   color: ${({ theme }) => theme && theme.textColor};
-
 `
 
 export const CardTitle = styled.p`
@@ -44,4 +43,3 @@ export const BorderCountry = styled.span`
   padding: 2px 12px;
   border: .1px groove ${({ theme }) => theme && theme.textColor};
 `
-

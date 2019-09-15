@@ -1,44 +1,41 @@
-import React, {useEffect} from "react"
+/* Dependencies */
+import React, { useEffect } from "react"
+
+/* Components */
 import { Link } from "gatsby"
+import Layout from "@components/layout"
+import { Button } from '@components/button'
+import ActionBar from "@components/action-bar"
+import DetailCard from "@components/card/detail-card"
 
-import Layout from "../components/layout"
-import Grid from '@material-ui/core/Grid'
+/* Icons */
 import { FaArrowLeft } from 'react-icons/fa'
-import { theme } from '../components/root'
-
-
-import {Button} from '../components/button'
-import ActionBar from "../components/action-bar"
-
-import CountryProfileSection from '../components/content'
-import DetailCard from "../components/card/detail-card";
-
 
 const CountryPage = ({ location }) => {
   useEffect(() => {
-    try{
+    try {
       document.title = `${location.state.country.name} profile`
-    }catch (err) {
+    } catch (err) {
       console.log("error ", err)
-    }    
-  }, []) // run just once
+    }
+  }, [])
 
   return (
     <Layout>
       <ActionBar>
         <Link to='/'>
           <Button>
-            <FaArrowLeft style={{marginRight:10}}/>
+            <FaArrowLeft style={{ marginRight: 10 }} />
             Back
           </Button>
         </Link>
       </ActionBar>
       <DetailCard
-         imgCard={(((location || {}).state || {}).country || {}).flag}
-         cardTitle={(((location || {}).state || {}).country || {}).name}
-         cardContent={(((location || {}).state || {}).country || {})}>
+        imgCard={(((location || {}).state || {}).country || {}).flag}
+        cardTitle={(((location || {}).state || {}).country || {}).name}
+        cardContent={(((location || {}).state || {}).country || {})}>
       </DetailCard>
-  </Layout>
+    </Layout>
   )
 }
 

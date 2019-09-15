@@ -1,17 +1,19 @@
+/* Dependencies */
 import React, { useState } from "react"
 import PropTypes from "prop-types"
+
+/* Gatsby dependencies */
 import { useStaticQuery, graphql } from "gatsby"
+
+/* Themes Components */
 import { ThemeProvider } from 'styled-components'
-
-
-
 import GlobalStyle from './root/globalStyle'
-
-
-import Header from "../components/header/header"
-import Content from './content'
-
 import * as themes from './root'
+
+/* Components */
+import Header from "@components/header/header"
+import Content from '@components/content'
+
 
 const Layout = ({ children }) => {
   const [currentTheme, setCurrentTheme] = useState('darkTheme')

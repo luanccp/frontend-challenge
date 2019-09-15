@@ -1,4 +1,7 @@
+/* Dependecies */
 import { createGlobalStyle } from 'styled-components'
+
+/* Components */
 import normalize from './normalize'
 
 const GlobalStyle = createGlobalStyle`

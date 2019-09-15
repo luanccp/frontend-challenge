@@ -6,6 +6,13 @@ import t from 'prop-types'
 import { Card, CardImage, CardContent, CardTitle, CardDetail, CardStrongDetail, BorderCountry } from './styles'
 
 
+/**
+ * @brief profile of country
+ * 
+ * @param imgCard src from img
+ * @param cardTitle Title of card and alt for img
+ * @param cardContent obj that will fill the card 
+ */
 const DetailCard = ({ imgCard, cardTitle, cardContent }) => {
 
   return (

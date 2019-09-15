@@ -58,15 +58,13 @@ const IndexPage = () => {
   const handleFilterByRegion = (event) => {
     const region = event.target.value
     
-    if (region!="") {
-      const countriesByRegion = countries.filter(country => {
-        if (country.region == region) return country
-      })
+    if (region !== "") {
+      const countriesByRegion = countries.filter(country => country.region === region ? country : "")
       
       document.title = `We have ${countriesByRegion.length} countries!`
 
       return setFilterCountries(countriesByRegion)
-    }else{ return setFilterCountries(countries)}
+    }else return setFilterCountries(countries)
   }
 
   return (

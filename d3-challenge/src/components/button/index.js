@@ -15,4 +15,4 @@ export const Button = styled.button`
     :hover{
         box-shadow: 0.5px 0.5px 10px ${({ theme }) => theme && theme.textColor};
     }
-`;
+`

@@ -1,14 +1,21 @@
+/* Dependecies */
 import React from "react"
 import t from "prop-types"
-import { Link } from "gatsby"
-import styled from 'styled-components'
 
+/* Components */
 import {Button} from '../button'
-
-import {FaMoon} from 'react-icons/fa'
 import { StyledHeader, Title, StyleLink } from './styles'
 
+/* Icons */
+import {FaMoon} from 'react-icons/fa'
 
+/**
+ * @brief Component that build the header 
+ * 
+ * @param siteTitle title fot top header
+ * @param onChangeTheme event to chagenge the theme
+ * @param currentTheme theme being used 
+ */
 const Header = ({ siteTitle, onChangeTheme, currentTheme }) => (
   <StyledHeader>
     <Title>

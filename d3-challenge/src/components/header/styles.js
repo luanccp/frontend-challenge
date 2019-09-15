@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-
 import { device } from '../root/devices'
 
+/* Component */
 import { Link } from 'gatsby'
 
 

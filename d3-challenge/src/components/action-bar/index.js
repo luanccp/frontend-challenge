@@ -1,6 +1,8 @@
+/* Dependecies */
 import React from "react"
 import t from "prop-types"
 
+/* Components */
 import { ActionBarSection } from './styles'
 
 const ActionBar = ({ children }) => (

@@ -1,6 +1,8 @@
+/* Dependecies */
 import React from 'react'
 import t from 'prop-types'
 
+/* Components */
 import { StyleInput, Wrapper } from './styles'
 
 const Input = ({ value, onChange, onKeyUp, onKeyPress, type, placeholder }) => (

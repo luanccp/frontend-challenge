@@ -5,7 +5,13 @@ import t from 'prop-types'
 /* Components */
 import { Card, CardImage, CardContent, CardTitle, CardDetail, CardStrongDetail } from './styles'
 
-
+/**
+ * @brief small card to show infos about the country
+ * 
+ * @param imgCard src from img
+ * @param cardTitle Title of card and alt for img
+ * @param cardContent obj that will fill the card 
+ */
 const SimpleCard = ({ imgCard, cardTitle, cardContent }) => (
   <Card>
     <CardImage src={imgCard} alt={cardTitle} />
