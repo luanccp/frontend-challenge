@@ -23,7 +23,7 @@ const CountryPage = ({ location }) => {
     }    
   }, []) // run just once
 
-
+  const country = ((location || {}).state || {}).country
   return (
     <Layout>
       <ActionBar>
@@ -35,26 +35,11 @@ const CountryPage = ({ location }) => {
         </Link>
       </ActionBar>
       <DetailCard
-         imgCard={location.state.country.flag}
-         cardTitle={location.state.country.name}
-         cardContent={location.state.country}>
-
+         imgCard={country.flag}
+         cardTitle={country.name}
+         cardContent={country}>
       </DetailCard>
-      {/* <div style={{display:'flex', flexDirection: 'row', justifyContent: 'flex-start', flexWrap:'wrap'}}>
-        <img src={location.state.country && location.state.country.flag} style={{width:360, height:280}}></img>  
-        <div style={{display:'flex', flexDirection: 'column', marginLeft: 28}}>
-          <h2>{location.state.country && location.state.country.name}</h2>
-          <p><strong>Native Name: </strong>{location.state.country && location.state.country.nativeName}</p>
-          <p><strong>Population: </strong>{location.state.country && location.state.country.population}</p>
-          <p><strong>Region: </strong>{location.state.country && location.state.country.region}</p>
-          <p><strong>Sub Region: </strong>{location.state.country && location.state.country.subregion}</p>
-          <p><strong>Capital: </strong>{location.state.country && location.state.country.capital}</p>
-          <p><strong>Top Level Domain: </strong>{location.state.country && location.state.country.topLevelDomain}</p>
-          <p><strong>Currencies: </strong>{location.state.country && location.state.country.currencies.map((curr) => curr.name + " | " )}</p>
-          <p><strong>Languages: </strong>{location.state.country && location.state.country.languages.map((lan) => lan.name  + " | ")}</p>
-        </div>
-      </div> */}
-    </Layout>
+  </Layout>
   )
 }
 
