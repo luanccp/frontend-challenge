@@ -1,24 +1,19 @@
-import React, { useCallback, useState, useEffect } from "react"
+import React, { useState, useEffect } from "react"
 
 import { Link } from 'gatsby'
 
 import Layout from "../components/layout"
 import SimpleCard from "../components/card/simple-card"
-import * as Image from '@content/images/gatsby-icon.png'
 
-import { theme } from '../components/root'
 import ActionBar from '../components/action-bar'
-import TextField from '@material-ui/core/TextField'
-import Grid from '@material-ui/core/Grid'
 import { FaSearch } from 'react-icons/fa'
 
 import api from '../api'
 
-import ClickAway from '../components/dropdown'
 
 import Input from '../components/input'
 
-import { SearchSection, ActionBarSection, NavbarDropdown, NavbarDropdownContent, NavbarDropdownTitle, NavbarDropdownItem } from '../components/action-bar/styles'
+import { SearchSection, NavbarDropdown, NavbarDropdownItem } from '../components/action-bar/styles'
 
 const IndexPage = () => {
 
