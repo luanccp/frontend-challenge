@@ -14,7 +14,7 @@ export const ActionBarSection = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 18px;
+  margin: 28px 0px;
   background-color:${({theme}) => theme && theme.backgroundColor};
   flex-wrap:wrap;
   flex-grow: 1;
